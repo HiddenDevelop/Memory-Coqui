@@ -19,5 +19,8 @@
   "devDependencies": {
     "sharp": "^0.35.5",
     "socket.io-client": "^4.8.4"
+  },
+  "engines": {
+    "node": ">=18"
   }
 }
