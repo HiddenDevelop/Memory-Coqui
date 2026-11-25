@@ -1,0 +1,23 @@
+{
+  "name": "memory-coqui",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "test": "node --test \"test/*.test.js\"",
+    "build:cards": "node scripts/build-cards.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "Online multiplayer Memory with room codes",
+  "dependencies": {
+    "express": "^5.3.0",
+    "socket.io": "^4.8.4"
+  },
+  "devDependencies": {
+    "sharp": "^0.35.5",
+    "socket.io-client": "^4.8.4"
+  }
+}

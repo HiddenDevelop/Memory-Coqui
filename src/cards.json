@@ -1,0 +1,70 @@
+[
+  {
+    "id": "caoba",
+    "name": "Coquí Caoba"
+  },
+  {
+    "id": "churi",
+    "name": "Coquí Churí"
+  },
+  {
+    "id": "comun",
+    "name": "Coquí Común"
+  },
+  {
+    "id": "dorado",
+    "name": "Coquí Dorado"
+  },
+  {
+    "id": "duende",
+    "name": "Coquí Duende"
+  },
+  {
+    "id": "grillo",
+    "name": "Coquí Grillo"
+  },
+  {
+    "id": "guajon",
+    "name": "Coquí Guajón"
+  },
+  {
+    "id": "martillito",
+    "name": "Coquí Martillito"
+  },
+  {
+    "id": "melodioso",
+    "name": "Coquí Melodioso"
+  },
+  {
+    "id": "palmeado",
+    "name": "Coquí Palmeado"
+  },
+  {
+    "id": "pitito",
+    "name": "Coquí Pitito"
+  },
+  {
+    "id": "de-eneida",
+    "name": "Coquí de Eneida"
+  },
+  {
+    "id": "de-mona",
+    "name": "Coquí de Mona"
+  },
+  {
+    "id": "de-la-montana",
+    "name": "Coquí de la Montaña"
+  },
+  {
+    "id": "de-las-hierbas",
+    "name": "Coquí de las Hierbas"
+  },
+  {
+    "id": "de-juan-rivero",
+    "name": "Coquí de Juan Rivero"
+  },
+  {
+    "id": "de-hedrick",
+    "name": "Coquí de Hedrick"
+  }
+]

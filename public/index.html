@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Memory Coquí</title>
+  <link rel="icon" type="image/webp" href="cards/dorado.webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,800&family=Nunito+Sans:wght@400;600;700;800&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <!-- Home -->
+    <section id="screen-home" class="screen panel">
+      <div class="hero" aria-hidden="true">
+        <img src="cards/caoba.webp" alt="">
+        <img src="cards/dorado.webp" alt="">
+        <img src="cards/palmeado.webp" alt="">
+      </div>
+      <h1 class="logo">Memory <em>Coquí</em></h1>
+      <p class="tagline">Match all 17 coquíes of Puerto Rico. Share a room code to play with friends.</p>
+
+      <label class="field">
+        <span>Your name</span>
+        <input id="name" maxlength="16" autocomplete="nickname" placeholder="e.g. Coquí">
+      </label>
+
+      <button id="btn-create" class="btn primary wide">Create room</button>
+
+      <div class="divider"><span>or join with a code</span></div>
+
+      <form id="join-form" class="join-row">
+        <input id="code" class="code-input" maxlength="4" autocomplete="off" autocapitalize="characters"
+               spellcheck="false" placeholder="ABCD" aria-label="Room code">
+        <button class="btn" type="submit">Join</button>
+      </form>
+    </section>
+
+    <!-- Lobby -->
+    <section id="screen-lobby" class="screen panel" hidden>
+      <p class="label">Room code</p>
+      <div class="room-code" id="lobby-code">----</div>
+      <button id="btn-copy" class="btn small">Copy invite link</button>
+
+      <h2>Players <span id="player-count" class="muted"></span></h2>
+      <ul id="lobby-players" class="player-list"></ul>
+
+      <p class="muted center">17 pairs · 34 cards</p>
+
+      <div id="host-controls" class="host-controls" hidden>
+        <button id="btn-start" class="btn primary wide">Start game</button>
+        <p id="start-hint" class="muted center"></p>
+      </div>
+      <p id="guest-wait" class="muted center">Waiting for the host to start…</p>
+
+      <button class="btn ghost btn-leave">Leave room</button>
+    </section>
+
+    <!-- Game -->
+    <section id="screen-game" class="screen" hidden>
+      <header class="game-header">
+        <div class="code-chip">Room <strong id="game-code"></strong></div>
+        <div id="turn-banner" class="turn-banner"></div>
+        <button class="btn ghost small btn-leave">Leave</button>
+      </header>
+      <ul id="scoreboard" class="scoreboard"></ul>
+      <div id="board" class="board"></div>
+
+      <div id="game-over" class="overlay" hidden>
+        <div class="panel">
+          <h2 id="winner-text"></h2>
+          <ol id="final-scores" class="final-scores"></ol>
+          <div id="rematch-controls" hidden>
+            <button id="btn-rematch" class="btn primary wide">Play again</button>
+          </div>
+          <p id="rematch-wait" class="muted center">Waiting for the host to start a rematch…</p>
+          <button class="btn ghost btn-leave">Leave room</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="client.js"></script>
+</body>
+</html>
